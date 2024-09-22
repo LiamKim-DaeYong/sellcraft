@@ -1,0 +1,16 @@
+### Create Order
+POST http://localhost:8080/v1/orders
+Content-Type: application/json
+
+{
+  "productName": "Laptop",
+  "userName": "JohnDoe",
+  "quantity": 2
+}
+
+
+### Get order by ID
+GET http://localhost:8080/v1/orders/1
+
+### Get orders by userName
+GET http://localhost:8080/v1/orders?userName=JohnDoe

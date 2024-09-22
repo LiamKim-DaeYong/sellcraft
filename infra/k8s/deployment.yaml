@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sellcraft
+  labels:
+    app: sellcraft
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sellcraft
+  template:
+    metadata:
+      labels:
+        app: sellcraft
+    spec:
+      containers:
+        - name: sellcraft
+          image: sellcraft:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ENV_VARIABLE
+              value: "value"
