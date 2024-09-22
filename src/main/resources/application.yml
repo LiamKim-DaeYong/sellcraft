@@ -1,8 +1,10 @@
+server:
+  port: 8081
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/sellcraftdb
-    username: sellcraft_admin
-    password: secureSell2024!
+    url: jdbc:postgresql://${DB_URL:localhost}:5432/sellcraftdb
+    username: ${DB_USER:sellcraft_admin}
+    password: ${DB_PASSWORD:secureSell2024!}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
