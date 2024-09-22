@@ -42,4 +42,6 @@ kotlin {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+    systemProperty("testcontainers.reuse.enable", "true")
+    environment("TESTCONTAINERS_RYUK_DISABLED", "true")
 }
